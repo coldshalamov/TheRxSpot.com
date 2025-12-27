@@ -1,0 +1,65 @@
+"Rxs for your Success"
+
+Change the link at "Patient Get Started" from just going to a broken link (some link called portal) change it to a boilerplate coming soon section with our same page design and banner that's in the home page and the privacy page, same design, just "Coming Soon" instead of a broken link
+
+Add a bible verse wherever seems best appropriate and aesthetically pleasing, Freely you have received; freely give. Matthew 10:8
+
+Change splash page to be immediately visible all text when you first load the page, and make a transition visualizer of some sort that floats the text into the screen when you first move to is, some kind of CSS effect. The text at the hero section is like a big wall of text and it's not all visible when you first load the page, you have to scroll down to see it, and it's not a consistent font with the rest of the page, the font or words on the hero section look out of place with the rest of the site and even sections look out of place with each other, choose a more stylistic font hopefully more in tune with the rest of the page. 
+There's a visualizer on a newlifeessentials.com website that an LLM described the transition visualizer for when you first open the page, maybe that can guide you how the text should come in, and it shouldn't require scrolling to get it all to show up, I feel like all the text should be visually represented in an intuitive and aesthetically pleasing way that doesn't just show up as a wall of bullet points that you have to scroll down to see all of.
+Other parts of the site are dynamic and have fade ins and transitions, that part should as well, the hero section.
+
+how it works and services need to be changed to a single section button called "For Patients" and that link at the top banner has to scroll the user down to the "How it works" section, because "how it works" and "our services" both refer to services that The Rx Spot provide specifically to patients and not to the other clients that they serve, so those two sections should be not 2, but linked to by one link at the top, and they should be encapsulated together somehow in a single section on the page. The look fine, but there should be some sort of border or container that visually links them together into obviously one section so as not to be confising and to visually explain to the reader that that section is refering to patient services and how patient services work.
+
+Take out whole section of cards that say "Licensed Providers
+Board-certified physicians & NPs
+FDA-Regulated
+Compliant compounding facilities
+Fast Turnaround
+Shipping within 3-5 business days
+100% Online
+No office visits required"
+
+join@therxspot.com should be the email that's in the contact section not the existing one
+
+forms should have a who referred you box on both of them, both forms that have buttons on the cards near the top
+
+remove cjc peptide from the list of peptides
+
+remove Tretinoin, glutathione from the other list
+
+Launch your own branded telehealth business powered by our infrastructure in 24 hrs, is what the complete sentence should say
+
+Remove How does the telehealth consultation work? part
+
+change We currently serve patients in all 50 states to  We currently serve patients and providers in all 50 states.
+
+Change "Once your prescription is approved, medications are typically shipped within 3-5 business days. We use temperature-controlled packaging for products that require refrigeration and provide tracking numbers for all shipments." to "whether it's patient specific or bulk, medications are..."
+
+change  What makes The Rx Spot different from other platforms? 
+
+Our 503(A) and 503(b) facilities allow for custom formulations and competitive pricing. in-house compounding capabilities allow for custom formulations and competitive pricing. 
+
+We also offer unique business opportunities (rep programs, affiliate programs, and turnkey platforms) that most telehealth companies don't provide.
+
+Change "Our turnkey platform allows you to launch your own branded telehealth business with zero upfront cost. We provide the technology, provider network, pharmacy fulfillment, and compliance infrastructure—you focus on marketing and patient acquisition. You keep the revenue, we handle the operations. Perfect for entrepreneurs, health coaches, or existing wellness businesses looking to add telehealth services." to "Our turnkey platform allows you to launch your own branded telehealth business with zero upfront cost. We provide the technology, provider network, pharmacy fulfillment, and compliance infrastructure—you focus on marketing and patient acquisition. You keep the revenue, we handle the operations. Perfect for entrepreneurs, health coaches, or existing wellness businesses looking to add telehealth services. All done in one day, not months."
+
+
+Remove bullet "How can I contact customer support?
+Email us at nb@therxspot.com or use the contact form in your patient portal. Our support team typically responds within 4-6 hours during business days. For urgent clinical questions, you can message your provider directly through the portal."
+
+remove whole section and banner " How can I contact customer support?
+Email us at nb@therxspot.com or use the contact form in your patient portal. Our support team typically responds within 4-6 hours during business days. For urgent clinical questions, you can message your provider directly through the portal."
+
+Change all "nb@therxspot.com" to "join@therxspot.com"
+
+Take out both pill shaped "FDA-Regulated
+Licensed Providers at the bottom"
+
+Take out  disclaimer "All medications and products are sourced through FDA-approved or FDA-registered facilities. Consult with a licensed provider to determine if treatment is appropriate for you."
+
+|
+On privacy page also change " Contact Us
+If you have questions about this Privacy Policy, please contact us:
+
+Email: join@therxspot.com
+Phone: (888) THERXSPOT / (888) 843-7977"

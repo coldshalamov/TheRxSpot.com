@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The Rx Spot - Telehealth Platform Onboarding">
+    <title>Telehealth Platform Onboarding - The Rx Spot</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=Dancing+Script:wght@600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css?v=8">
+
+    <style>
+        body {
+            background-color: var(--color-gray-100);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .onboarding-section {
+            padding: 120px 0 60px;
+            /* Reduced top padding since nav is sticky but we want to see content */
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .form-card {
+            background: white;
+            padding: 40px;
+            border-radius: var(--radius-xl);
+            box-shadow: var(--shadow-xl);
+            width: 100%;
+            max-width: 600px;
+            border: 1px solid var(--color-gray-200);
+        }
+
+        .form-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .form-header h1 {
+            font-family: var(--font-heading);
+            color: var(--color-brand-navy);
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .form-header p {
+            color: var(--color-gray-600);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--color-gray-700);
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid var(--color-gray-300);
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            border-color: var(--color-accent-cyan);
+            box-shadow: 0 0 0 3px rgba(0, 212, 255, 0.1);
+            outline: none;
+        }
+
+        .form-file-input {
+            border: 2px dashed var(--color-gray-300);
+            padding: 20px;
+            text-align: center;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .form-file-input:hover {
+            border-color: var(--color-accent-cyan);
+            background-color: rgba(0, 212, 255, 0.05);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation (Simplified for standalone page) -->
+    <nav id="main-nav" class="nav-sticky" style="background: var(--color-brand-navy);">
+        <div class="nav-main-content">
+            <div class="container">
+                <div class="nav-wrapper">
+                    <a href="index.html" class="logo">
+                        <img src="images/processed/TheRxSpot_Logo_WebHD.png" alt="The Rx Spot" class="logo-image">
+                    </a>
+
+                    <div class="nav-links">
+                        <a href="index.html">Back to Home</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="onboarding-section">
+        <div class="container">
+            <div class="form-card">
+                <div class="form-header">
+                    <h1>Telehealth Platform Onboarding</h1>
+                    <p>Please finish providing your information below.</p>
+                </div>
+
+                <!-- FormSubmit Action with Placeholder Email -->
+                <form action="https://formsubmit.co/replace_me@therxspot.com" method="POST"
+                    enctype="multipart/form-data">
+                    <input type="hidden" name="_subject" value="New Telehealth Onboarding Submission">
+                    <input type="hidden" name="_template" value="box">
+                    <input type="hidden" name="_captcha" value="false">
+                    <!-- Redirect back to this page or a thank you page (optional, defaults to formsubmit page) -->
+                    <input type="hidden" name="_next" value="https://therxspot.com/telehealth.html">
+
+                    <div class="form-group">
+                        <label for="businessName">Business Name *</label>
+                        <input type="text" id="businessName" name="businessName" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number *</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+
+                    <div class="form-row" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                        <div class="form-group">
+                            <label for="state">State *</label>
+                            <input type="text" id="state" name="state" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="zipCode">Zip Code *</label>
+                            <input type="text" id="zipCode" name="zipCode" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-row" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                        <div class="form-group">
+                            <label for="dob">Date of Birth *</label>
+                            <input type="date" id="dob" name="dob" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="gender">Gender *</label>
+                            <select id="gender" name="gender" required>
+                                <option value="">Select...</option>
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                                <option value="Other">Other</option>
+                                <option value="Prefer not to say">Prefer not to say</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="logo">Upload Logo *</label>
+                        <input type="file" id="logo" name="logo" accept="image/*" required class="form-file-input">
+                        <small style="display:block; margin-top:5px; color:var(--color-gray-500);">Accepted formats:
+                            PNG, JPG, SVG</small>
+                    </div>
+
+                    <button type="submit" class="btn-primary btn-block btn-lg" style="margin-top: 30px;">Submit
+                        Information</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2025 The Rx Spot. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

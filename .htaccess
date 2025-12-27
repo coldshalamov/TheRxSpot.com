@@ -1,0 +1,43 @@
+# SAFE MODE .htaccess
+# This file is minimized to prevent any interference with Email, SSL, or Subdomains
+
+# 1. Basic Security (Prevents listing files)
+Options -Indexes
+
+# 2. Main Entry Point
+DirectoryIndex index.html
+
+# 3. Caching (Optimized for performance but safe)
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresDefault "access plus 1 week"
+    # HTML/CSS/JS refresh quickly to show your updates
+    ExpiresByType text/html "access plus 5 minutes"
+    ExpiresByType text/css "access plus 5 minutes"
+    ExpiresByType text/javascript "access plus 5 minutes"
+    ExpiresByType application/javascript "access plus 5 minutes"
+    # Images cache longer
+    ExpiresByType image/jpg "access plus 1 month"
+    ExpiresByType image/jpeg "access plus 1 month"
+    ExpiresByType image/png "access plus 1 month"
+</IfModule>
+
+# NOTE: We removed "ErrorDocument 404" redirection. 
+# This ensures that if an Email Client checks for a specific configuration file 
+# and doesn't find it, it gets a "Real" 404 instead of your Homepage HTML,
+# which can confuse email software like Outlook or Gmail.
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    
+    # Handle /Telehealth (case insensitive) -> telehealth.html
+    RewriteRule ^Telehealth/?$ telehealth.html [NC,L]
+
+    # Generic: Allow access to .html files without the extension
+    # If request is not a directory and...
+    RewriteCond %{REQUEST_FILENAME} !-d
+    # ...if request.html exists as a file...
+    RewriteCond %{REQUEST_FILENAME}.html -f
+    # ...serve the .html file
+    RewriteRule ^(.*)$ $1.html [L]
+</IfModule>

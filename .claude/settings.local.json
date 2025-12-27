@@ -1,0 +1,20 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(claude mcp add --transport stdio playwright -- cmd /c npx -y @playwright/mcp@latest)",
+      "Bash(dir:*)",
+      "Bash(python process_images.py:*)",
+      "Bash(findstr:*)",
+      "Bash(python create_thumbnails.py:*)",
+      "Bash(if not exist \"design\" mkdir design)",
+      "Bash(if not exist \"architecture\" mkdir architecture)",
+      "Bash(npm init:*)",
+      "Bash(npm install:*)",
+      "Bash(npx playwright install chromium)",
+      "Bash(node analyze-landing-pages.js:*)",
+      "Bash(python -m http.server:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
