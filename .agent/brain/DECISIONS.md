@@ -29,3 +29,15 @@
    - Changed from 4-column layout to 5-column on 1400px+ screens
    - Added intermediate 3-column layout for 1024-1399px screens
    - Existing `delay-6` class already present in CSS
+
+## 2025-12-29: Added Ready Pro Telehealth Partnership Page
+
+### Changes Made:
+
+1. **Created `readyprotelehealth.html`** - New co-branded onboarding page
+   - Clone of `telehealth.html` tailored for Ready Pro partnership.
+   - Features "Teal" (#01b5c6) and "Navy" mashup branding.
+   - Includes both Ready Pro and Rx Spot logos side-by-side in header.
+   - Submits to `readypro@therxspot.com` (placeholder destination).
+   - "Who referred you?" field pre-filled with "Ready Pro Partnership".
+

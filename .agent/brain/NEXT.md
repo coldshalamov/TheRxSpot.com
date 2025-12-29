@@ -5,6 +5,8 @@
 2. Test `nutrition-business.html` form submission
 3. Verify responsive layout at different breakpoints (mobile, tablet, desktop)
 4. Confirm email routing to nutra@therxspot.com
+5. Verify `readyprotelehealth.html` rendering and branding
+6. Test Ready Pro form submission routing
 
 ## Potential Future Enhancements
 - Add a confirmation/thank you page after form submission
