@@ -137,172 +137,175 @@
             border-radius: var(--radius-lg);
             width: 100%;
             font-size: 1.1rem;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
 
-            .btn-submit-partner:hover {
-                transform: translateY(-2px);
-                box-shadow: 0 8px 20px rgba(1, 181, 198, 0.3);
-            }
+        .btn-submit-partner:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(1, 181, 198, 0.3);
+        }
 
-            /* SLEEK REDESIGN STYLES */
-            .hero-short {
-                height: 280px !important;
-                min-height: 280px !important;
-                align-items: flex-start;
-                padding-top: 100px;
-            }
+        /* SLEEK REDESIGN STYLES */
+        .hero-short {
+            height: 280px !important;
+            min-height: 280px !important;
+            align-items: flex-start;
+            padding-top: 100px;
+        }
 
-            .onboarding-section {
-                padding-top: 0;
-                margin-top: -100px;
-                /* Overlap effect */
-                position: relative;
-                z-index: 10;
-            }
+        .onboarding-section {
+            padding-top: 0;
+            margin-top: -100px;
+            /* Overlap effect */
+            position: relative;
+            z-index: 10;
+        }
 
-            .partner-header {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                text-align: center;
-                margin-bottom: 30px;
-                padding-bottom: 20px;
-                border-bottom: 1px solid var(--color-gray-200);
-            }
+        .partner-header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--color-gray-200);
+        }
 
-            .partner-title {
-                font-family: 'Outfit', sans-serif;
-                font-weight: 700;
-                font-size: 2.5rem;
-                color: var(--color-brand-navy);
-                margin-bottom: 5px;
-                line-height: 1.2;
-                text-align: center !important;
-                display: block;
-                width: 100%;
-            }
+        .partner-title {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 700;
+            font-size: 2.5rem;
+            color: var(--color-brand-navy);
+            margin-bottom: 5px;
+            line-height: 1.2;
+            text-align: center !important;
+            display: block;
+            width: 100%;
+        }
 
-            .partner-tagline {
-                font-family: 'Inter', sans-serif;
-                font-weight: 400;
-                font-size: 1.1rem;
-                color: var(--color-ready-teal);
-                font-style: italic;
-                letter-spacing: 0.02em;
-                text-align: center !important;
-                display: block;
-                width: 100%;
-            }
+        .partner-tagline {
+            font-family: 'Inter', sans-serif;
+            font-weight: 400;
+            font-size: 1.1rem;
+            color: var(--color-ready-teal);
+            font-style: italic;
+            letter-spacing: 0.02em;
+            text-align: center !important;
+            display: block;
+            width: 100%;
+        }
 
-            .nav-actions-stack {
-                display: flex;
-            }
+        .nav-actions-stack {
+            display: flex;
+        }
 
-            /* NEW SIDEBAR LAYOUT STYLES */
-            /* TRIPTYCH LAYOUT STYLES - Single Cohesive Card */
+        /* NEW SIDEBAR LAYOUT STYLES */
+        /* TRIPTYCH LAYOUT STYLES - Single Cohesive Card */
+        .ready-pro-container {
+            display: flex;
+            flex-direction: column;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(1, 181, 198, 0.15);
+            overflow: hidden;
+            width: 100%;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .side-panel {
+            background-color: #effbfe;
+            /* Ready Pro Light Blue */
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 40px;
+        }
+
+        .form-panel {
+            background-color: white;
+            padding: 40px;
+            flex: 1;
+            /* Takes remaining space on mobile, specific width on desktop */
+            border-top: 6px solid var(--color-ready-teal);
+            /* Accent on top */
+        }
+
+        .info-item {
+            /* No card look, just text blocks */
+        }
+
+        .info-title {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: #00b5c8;
+            /* Ready Pro Teal */
+            margin-bottom: 12px;
+            line-height: 1.2;
+        }
+
+        .info-text {
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            color: #374151;
+            line-height: 1.6;
+        }
+
+        /* Hiding original Info Card styles since we are using panels now */
+        .info-card,
+        .sidebar,
+        .split-layout-wrapper {
+            display: none;
+        }
+
+        @media (min-width: 768px) {
             .ready-pro-container {
-                display: flex;
-                flex-direction: column;
-                background: white;
-                border-radius: 20px;
-                box-shadow: 0 20px 60px rgba(1, 181, 198, 0.15);
-                overflow: hidden;
-                width: 100%;
-                max-width: 1400px;
-                margin: 0 auto;
+                flex-direction: row;
+                align-items: stretch;
+                /* Equal height */
             }
 
             .side-panel {
-                background-color: #effbfe;
-                /* Ready Pro Light Blue */
-                padding: 40px;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                gap: 40px;
+                flex: 1;
+                /* Wings take 1 part each */
+                max-width: 350px;
+                /* Limit width of sidebars */
             }
 
             .form-panel {
-                background-color: white;
-                padding: 40px;
-                flex: 1;
-                /* Takes remaining space on mobile, specific width on desktop */
-                border-top: 6px solid var(--color-ready-teal);
-                /* Accent on top */
-            }
-
-            .info-item {
-                /* No card look, just text blocks */
-            }
-
-            .info-title {
-                font-family: 'Outfit', sans-serif;
-                font-weight: 700;
-                font-size: 1.5rem;
-                color: #00b5c8;
-                /* Ready Pro Teal */
-                margin-bottom: 12px;
-                line-height: 1.2;
-            }
-
-            .info-text {
-                font-family: 'Inter', sans-serif;
-                font-size: 1rem;
-                color: #374151;
-                line-height: 1.6;
-            }
-
-            /* Hiding original Info Card styles since we are using panels now */
-            .info-card,
-            .sidebar,
-            .split-layout-wrapper {
-                display: none;
-            }
-
-            @media (min-width: 768px) {
-                .ready-pro-container {
-                    flex-direction: row;
-                    align-items: stretch;
-                    /* Equal height */
-                }
-
-                .side-panel {
-                    flex: 1;
-                    /* Wings take 1 part each */
-                    max-width: 350px;
-                    /* Limit width of sidebars */
-                }
-
-                .form-panel {
-                    flex: 2;
-                    /* Form takes 2 parts (wider) */
-                    border-left: 1px solid #edf2f7;
-                    border-right: 1px solid #edf2f7;
-                    border-top: none;
-                    /* Remove top border in flex mode if desired, or keep */
-                    border-top: 6px solid var(--color-ready-teal);
-                    /* Keep accent */
-                    z-index: 10;
-                }
-
-                .side-panel.left {
-                    text-align: right;
-                    /* Align text towards the form? User ref showed left align. Let's stick to left align for readability. */
-                    text-align: left;
-                }
-            }
-
-            /* Override previous form-card margins/shadows since it's now inside the container */
-            .form-card {
-                box-shadow: none;
-                border: none;
-                border-radius: 0;
+                flex: 2;
+                /* Form takes 2 parts (wider) */
+                border-left: 1px solid #edf2f7;
+                border-right: 1px solid #edf2f7;
                 border-top: none;
-                margin: 0;
-                max-width: none;
-                padding: 0;
-                /* Padding handled by form-panel */
+                /* Remove top border in flex mode if desired, or keep */
+                border-top: 6px solid var(--color-ready-teal);
+                /* Keep accent */
+                z-index: 10;
             }
+
+            .side-panel.left {
+                text-align: right;
+                /* Align text towards the form? User ref showed left align. Let's stick to left align for readability. */
+                text-align: left;
+            }
+        }
+
+        /* Override previous form-card margins/shadows since it's now inside the container */
+        .form-card {
+            box-shadow: none;
+            border: none;
+            border-radius: 0;
+            border-top: none;
+            margin: 0;
+            max-width: none;
+            padding: 0;
+            /* Padding handled by form-panel */
+        }
     </style>
 </head>
 
