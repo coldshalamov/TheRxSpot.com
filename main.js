@@ -295,6 +295,11 @@ class RevealAnimations {
     init() {
         if (this.elements.length === 0) return;
 
+        // More sensitive trigger on mobile so animations happen as items scroll into view
+        const isMobile = window.innerWidth <= 768;
+        const rootMargin = isMobile ? '0px 0px 0px 0px' : '0px 0px -50px 0px';
+        const threshold = isMobile ? 0.15 : 0.1;
+
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -303,8 +308,8 @@ class RevealAnimations {
                 }
             });
         }, {
-            threshold: 0.1, // Trigger as soon as 10% is visible
-            rootMargin: '0px 0px -50px 0px'
+            threshold: threshold,
+            rootMargin: rootMargin
         });
 
         this.elements.forEach(el => observer.observe(el));

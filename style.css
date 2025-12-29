@@ -995,6 +995,41 @@ p {
     transform: translate(0, 0);
 }
 
+/* Mobile: Override all reveals to come from bottom only */
+@media (max-width: 768px) {
+
+    .reveal,
+    .reveal-left,
+    .reveal-right,
+    .reveal-bottom-left,
+    .reveal-bottom-right {
+        opacity: 0;
+        transform: translateY(40px);
+        transition: opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1), transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+        animation: fallback-reveal 0.1s ease-out 2s forwards;
+    }
+
+    .reveal.in-view,
+    .reveal-left.in-view,
+    .reveal-right.in-view,
+    .reveal-bottom-left.in-view,
+    .reveal-bottom-right.in-view {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    /* Remove staggered delays on mobile - all animate immediately */
+    .delay-1,
+    .delay-2,
+    .delay-3,
+    .delay-4,
+    .delay-5,
+    .delay-6,
+    .delay-7 {
+        transition-delay: 0s;
+    }
+}
+
 /* Cleaned up duplicate styles */
 
 /* ================================================================
