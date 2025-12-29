@@ -32,14 +32,34 @@
             flex-direction: column;
         }
 
+        /* Nav Group Styling */
+        .nav-brand-group {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .partner-logo-img {
+            height: 60px;
+            /* Adjust height to look good next to the larger logo */
+            width: auto;
+            border-radius: 4px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .brand-divider {
+            height: 40px;
+            width: 1px;
+            background-color: rgba(255, 255, 255, 0.4);
+        }
+
+        /* Onboarding Section styling */
         .onboarding-section {
-            padding: 140px 0 60px;
-            /* Increased top padding for larger nav */
+            padding: 60px 0;
             flex-grow: 1;
             display: flex;
             align-items: center;
             justify-content: center;
-            background: linear-gradient(to bottom, #f0fdff, var(--color-gray-100));
         }
 
         .form-card {
@@ -126,95 +146,35 @@
             box-shadow: 0 8px 20px rgba(1, 181, 198, 0.3);
         }
 
-        /* Nav Overrides for Partner Logo Mashup */
-        .nav-sticky {
-            background: rgba(255, 255, 255, 0.95) !important;
-            backdrop-filter: blur(10px);
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-        }
-
-        .nav-wrapper {
-            display: flex;
-            /* Flex instead of grid for custom layout */
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        /* Hide default logo styling to create custom dual container */
-        .logo {
-            display: none !important;
-        }
-
-        .partner-nav-brand {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-        }
-
-        .brand-logo-img {
-            height: 70px;
-            width: auto;
-            object-fit: contain;
-        }
-
-        .divider-line {
-            height: 40px;
-            width: 1px;
-            background-color: var(--color-gray-300);
-        }
-
-        .nav-links {
-            margin-left: auto;
-            margin-right: 40px;
-        }
-
-        @media (max-width: 768px) {
-            .partner-nav-brand {
-                gap: 10px;
-            }
-
-            .brand-logo-img {
-                height: 50px;
-            }
-
-            .nav-links {
-                display: none;
-            }
-        }
-
         .nav-actions-stack {
             display: flex;
-        }
-
-        .btn-phone {
-            color: var(--color-brand-navy) !important;
-            border-color: var(--color-brand-navy) !important;
         }
     </style>
 </head>
 
 <body>
 
-    <!-- Navigation -->
+    <!-- Navigation (Standard Structure) -->
     <nav id="main-nav" class="nav-sticky">
         <div class="nav-main-content">
-            <div class="container-wide"> <!-- Use Wide container for more space -->
+            <div class="container-wide">
                 <div class="nav-wrapper">
 
-                    <!-- Dual Logo Brand Area -->
-                    <div class="partner-nav-brand">
-                        <a href="index.html">
-                            <img src="images/Readypro-cropped.jpg" alt="Ready Pro" class="brand-logo-img">
-                        </a>
-                        <div class="divider-line"></div>
-                        <a href="index.html">
-                            <img src="images/processed/TheRxSpot_Logo_WebHD.png" alt="The Rx Spot"
-                                class="brand-logo-img">
+                    <!-- Brand Group: Partner + Standard Rx Logo -->
+                    <div class="nav-brand-group">
+                        <!-- Ready Pro Logo (New) -->
+                        <img src="images/Readypro-cropped.jpg" alt="Ready Pro" class="partner-logo-img">
+
+                        <div class="brand-divider"></div>
+
+                        <!-- The Rx Spot Standard Logo Container -->
+                        <a href="index.html" class="logo">
+                            <img src="images/processed/TheRxSpot_Logo_WebHD.png" alt="The Rx Spot" class="logo-image">
                         </a>
                     </div>
 
                     <div class="nav-links">
-                        <a href="index.html" style="color: var(--color-brand-navy) !important;">Back to Home</a>
+                        <a href="index.html" style="color: white !important;">Back to Home</a>
                     </div>
 
                     <div class="nav-actions-stack">
@@ -232,6 +192,21 @@
             </div>
         </div>
     </nav>
+
+    <!-- Hero Section (Standard) -->
+    <section class="hero hero-short">
+        <div class="hero-background">
+            <img src="images/processed/modern_hero.png" alt="" class="hero-bg-image">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-sub reveal delay-1" style="font-size: var(--text-4xl); margin-bottom: 0; opacity: 1;">
+                    Ready Pro Partnership
+                </h1>
+            </div>
+        </div>
+    </section>
 
     <!-- Content Section -->
     <section class="onboarding-section">
