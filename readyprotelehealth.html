@@ -199,35 +199,49 @@
             }
 
             /* NEW SIDEBAR LAYOUT STYLES */
-            /* NEW SIDEBAR LAYOUT STYLES - REFINED */
-            .info-card {
-                background: #effbfe;
-                /* Light blue from reference */
-                border-radius: 8px;
-                padding: 30px;
-                margin-bottom: 25px;
-                border: none;
-                box-shadow: none;
-                /* Flat design */
+            /* TRIPTYCH LAYOUT STYLES - Single Cohesive Card */
+            .ready-pro-container {
+                display: flex;
+                flex-direction: column;
+                background: white;
+                border-radius: 20px;
+                box-shadow: 0 20px 60px rgba(1, 181, 198, 0.15);
+                overflow: hidden;
+                width: 100%;
+                max-width: 1400px;
+                margin: 0 auto;
             }
 
-            .info-card:hover {
-                background: #e5f7fc;
-                /* Slight darken on hover */
+            .side-panel {
+                background-color: #effbfe;
+                /* Ready Pro Light Blue */
+                padding: 40px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                gap: 40px;
             }
 
-            .info-icon {
-                display: none;
-                /* Text only as per reference */
+            .form-panel {
+                background-color: white;
+                padding: 40px;
+                flex: 1;
+                /* Takes remaining space on mobile, specific width on desktop */
+                border-top: 6px solid var(--color-ready-teal);
+                /* Accent on top */
+            }
+
+            .info-item {
+                /* No card look, just text blocks */
             }
 
             .info-title {
                 font-family: 'Outfit', sans-serif;
                 font-weight: 700;
-                font-size: 1.4rem;
+                font-size: 1.5rem;
                 color: #00b5c8;
                 /* Ready Pro Teal */
-                margin-bottom: 15px;
+                margin-bottom: 12px;
                 line-height: 1.2;
             }
 
@@ -238,53 +252,56 @@
                 line-height: 1.6;
             }
 
-            @media (min-width: 1200px) {
-                .split-layout-wrapper {
-                    display: grid;
-                    grid-template-columns: 1fr 580px 1fr;
-                    gap: 40px;
-                    align-items: start;
+            /* Hiding original Info Card styles since we are using panels now */
+            .info-card,
+            .sidebar,
+            .split-layout-wrapper {
+                display: none;
+            }
+
+            @media (min-width: 1024px) {
+                .ready-pro-container {
+                    flex-direction: row;
+                    align-items: stretch;
+                    /* Equal height */
                 }
 
-                .sidebar {
-                    padding-top: 40px;
+                .side-panel {
+                    flex: 1;
+                    /* Wings take 1 part each */
+                    max-width: 350px;
+                    /* Limit width of sidebars */
                 }
 
-                /* Reveal animations for sidebars */
-                .sidebar-left {
-                    animation: slideInLeft 0.8s ease-out forwards;
-                    opacity: 0;
+                .form-panel {
+                    flex: 2;
+                    /* Form takes 2 parts (wider) */
+                    border-left: 1px solid #edf2f7;
+                    border-right: 1px solid #edf2f7;
+                    border-top: none;
+                    /* Remove top border in flex mode if desired, or keep */
+                    border-top: 6px solid var(--color-ready-teal);
+                    /* Keep accent */
+                    z-index: 10;
                 }
 
-                .sidebar-right {
-                    animation: slideInRight 0.8s ease-out forwards;
-                    opacity: 0;
-                    animation-delay: 0.2s;
+                .side-panel.left {
+                    text-align: right;
+                    /* Align text towards the form? User ref showed left align. Let's stick to left align for readability. */
+                    text-align: left;
                 }
             }
 
-            @keyframes slideInLeft {
-                from {
-                    opacity: 0;
-                    transform: translateX(-30px);
-                }
-
-                to {
-                    opacity: 1;
-                    transform: translateX(0);
-                }
-            }
-
-            @keyframes slideInRight {
-                from {
-                    opacity: 0;
-                    transform: translateX(30px);
-                }
-
-                to {
-                    opacity: 1;
-                    transform: translateX(0);
-                }
+            /* Override previous form-card margins/shadows since it's now inside the container */
+            .form-card {
+                box-shadow: none;
+                border: none;
+                border-radius: 0;
+                border-top: none;
+                margin: 0;
+                max-width: none;
+                padding: 0;
+                /* Padding handled by form-panel */
             }
     </style>
 </head>
