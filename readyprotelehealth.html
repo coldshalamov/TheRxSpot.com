@@ -137,18 +137,56 @@
             border-radius: var(--radius-lg);
             width: 100%;
             font-size: 1.1rem;
-            cursor: pointer;
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
 
-        .btn-submit-partner:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(1, 181, 198, 0.3);
-        }
+            .btn-submit-partner:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 8px 20px rgba(1, 181, 198, 0.3);
+            }
 
-        .nav-actions-stack {
-            display: flex;
-        }
+            /* SLEEK REDESIGN STYLES */
+            .hero-short {
+                height: 280px !important;
+                min-height: 280px !important;
+                align-items: flex-start;
+                padding-top: 100px;
+            }
+
+            .onboarding-section {
+                padding-top: 0;
+                margin-top: -100px;
+                /* Overlap effect */
+                position: relative;
+                z-index: 10;
+            }
+
+            .partner-header {
+                text-align: center;
+                margin-bottom: 30px;
+                padding-bottom: 20px;
+                border-bottom: 1px solid var(--color-gray-200);
+            }
+
+            .partner-title {
+                font-family: 'Outfit', sans-serif;
+                font-weight: 700;
+                font-size: 2.5rem;
+                color: var(--color-brand-navy);
+                margin-bottom: 5px;
+                line-height: 1.2;
+            }
+
+            .partner-tagline {
+                font-family: 'Inter', sans-serif;
+                font-weight: 400;
+                font-size: 1.1rem;
+                color: var(--color-ready-teal);
+                font-style: italic;
+                letter-spacing: 0.02em;
+            }
+
+            .nav-actions-stack {
+                display: flex;
+            }
     </style>
 </head>
 
@@ -194,21 +232,14 @@
     </nav>
 
     <!-- Hero Section (Standard) -->
-    <section class="hero hero-short" style="height: 450px; min-height: 450px;">
+    <!-- Hero Section (Background Only) -->
+    <section class="hero hero-short">
         <div class="hero-background">
             <img src="images/processed/modern_hero.png" alt="" class="hero-bg-image">
             <div class="hero-overlay"></div>
         </div>
         <div class="container">
-            <div class="hero-content" style="padding-top: 120px;">
-                <h1 class="hero-sub reveal delay-1" style="font-size: 5rem; margin-bottom: 0; opacity: 1;">
-                    Ready Pro
-                </h1>
-                <p
-                    style="font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 2.2rem; color: var(--color-ready-teal); margin-top: 15px; letter-spacing: -0.02em;">
-                    When You Eat Less, Every Bite Matters More
-                </p>
-            </div>
+            <!-- Content moved to form card for sleek look -->
         </div>
     </section>
 
@@ -217,6 +248,11 @@
         <div class="container">
 
             <div class="form-card">
+
+                <div class="partner-header">
+                    <h2 class="partner-title">Ready Pro</h2>
+                    <p class="partner-tagline">When You Eat Less, Every Bite Matters More</p>
+                </div>
 
                 <div class="form-header">
                     <p>Please complete your practice information below to get started.</p>
