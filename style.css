@@ -870,15 +870,17 @@ p {
    8. ANIMATION UTILITIES (Reveal)
    ================================================================ */
 
-/* Initial Reveal State */
-/* FALLBACK: After 2 seconds, auto-show content even if JS fails */
+/* Unified animation timing across site */
+/* Duration: 1s, Easing: smooth deceleration */
+
+/* Initial Reveal State - From Bottom */
 .reveal {
     opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.8s cubic-bezier(0.2, 0.8, 0.2, 1),
-        transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+    transform: translateY(80px);
+    transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1),
+        transform 1s cubic-bezier(0.16, 1, 0.3, 1);
     will-change: opacity, transform;
-    animation: fallback-reveal 0.1s ease-out 2s forwards;
+    animation: fallback-reveal 0.1s ease-out 2.5s forwards;
 }
 
 @keyframes fallback-reveal {
@@ -923,21 +925,19 @@ p {
     transition-delay: 0.7s;
 }
 
-/* Horizontal Reveals */
+/* Horizontal Reveals - From Left/Right */
 .reveal-left {
     opacity: 0;
-    transform: translateX(-100px);
-    /* Increased offset for drama */
-    transition: opacity 1.2s cubic-bezier(0.22, 1, 0.36, 1), transform 1.2s cubic-bezier(0.22, 1, 0.36, 1);
-    animation: fallback-reveal-left 0.1s ease-out 2s forwards;
+    transform: translateX(-120px);
+    transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+    animation: fallback-reveal-left 0.1s ease-out 2.5s forwards;
 }
 
 .reveal-right {
     opacity: 0;
-    transform: translateX(100px);
-    /* Increased offset for drama */
-    transition: opacity 1.2s cubic-bezier(0.22, 1, 0.36, 1), transform 1.2s cubic-bezier(0.22, 1, 0.36, 1);
-    animation: fallback-reveal-right 0.1s ease-out 2s forwards;
+    transform: translateX(120px);
+    transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+    animation: fallback-reveal-right 0.1s ease-out 2.5s forwards;
 }
 
 @keyframes fallback-reveal-left {
@@ -963,16 +963,16 @@ p {
 /* Diagonal Reveals (45-degree angles) */
 .reveal-bottom-left {
     opacity: 0;
-    transform: translate(-70px, 70px);
-    transition: opacity 1.2s cubic-bezier(0.22, 1, 0.36, 1), transform 1.2s cubic-bezier(0.22, 1, 0.36, 1);
-    animation: fallback-reveal-bottom-left 0.1s ease-out 2s forwards;
+    transform: translate(-90px, 90px);
+    transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+    animation: fallback-reveal-bottom-left 0.1s ease-out 2.5s forwards;
 }
 
 .reveal-bottom-right {
     opacity: 0;
-    transform: translate(70px, 70px);
-    transition: opacity 1.2s cubic-bezier(0.22, 1, 0.36, 1), transform 1.2s cubic-bezier(0.22, 1, 0.36, 1);
-    animation: fallback-reveal-bottom-right 0.1s ease-out 2s forwards;
+    transform: translate(90px, 90px);
+    transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+    animation: fallback-reveal-bottom-right 0.1s ease-out 2.5s forwards;
 }
 
 @keyframes fallback-reveal-bottom-left {
@@ -1004,9 +1004,9 @@ p {
     .reveal-bottom-left,
     .reveal-bottom-right {
         opacity: 0;
-        transform: translateY(40px);
-        transition: opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1), transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
-        animation: fallback-reveal 0.1s ease-out 2s forwards;
+        transform: translateY(60px);
+        transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+        animation: fallback-reveal 0.1s ease-out 2.5s forwards;
     }
 
     .reveal.in-view,

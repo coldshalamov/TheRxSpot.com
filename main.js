@@ -247,16 +247,16 @@ class ScrollAnimations {
     }
 
     init() {
-        // ... (Maintain existing standard animations for other cards) ...
-        // Initialize standard card animations
+        // Initialize standard card animations - match reveal animation distances
         this.elements.forEach(element => {
             element.style.opacity = '0';
-            element.style.transform = 'translateY(30px)';
+            element.style.transform = 'translateY(80px)';
         });
 
+        // Trigger earlier - positive bottom margin means trigger before element is on screen
         const options = {
-            threshold: 0.15,
-            rootMargin: '0px 0px -80px 0px'
+            threshold: 0.05,
+            rootMargin: '50px 0px 50px 0px'
         };
 
         const observer = new IntersectionObserver((entries) => {
@@ -266,7 +266,8 @@ class ScrollAnimations {
                     const delay = parent ? Array.from(parent.children).indexOf(entry.target) * 100 : 0;
 
                     setTimeout(() => {
-                        entry.target.style.transition = 'opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1), transform 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
+                        // Match the unified 1s timing from CSS
+                        entry.target.style.transition = 'opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1)';
                         entry.target.style.opacity = '1';
                         entry.target.style.transform = 'translateY(0)';
                     }, delay);
@@ -295,10 +296,10 @@ class RevealAnimations {
     init() {
         if (this.elements.length === 0) return;
 
-        // More sensitive trigger on mobile so animations happen as items scroll into view
+        // Trigger earlier - positive rootMargin means trigger before element is on screen
         const isMobile = window.innerWidth <= 768;
-        const rootMargin = isMobile ? '0px 0px 0px 0px' : '0px 0px -50px 0px';
-        const threshold = isMobile ? 0.15 : 0.1;
+        const rootMargin = isMobile ? '50px 0px 50px 0px' : '50px 0px 50px 0px';
+        const threshold = 0.05;
 
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
