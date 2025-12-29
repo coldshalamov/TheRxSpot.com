@@ -288,7 +288,7 @@ class ScrollAnimations {
 
 class RevealAnimations {
     constructor() {
-        this.elements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+        this.elements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-bottom-left, .reveal-bottom-right');
         this.init();
     }
 
