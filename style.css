@@ -1596,7 +1596,7 @@ p {
     gap: var(--space-2) var(--space-4);
 }
 
-@media (min-width: 640px) {
+@media (min-width: 1024px) {
     .split-list {
         grid-template-columns: repeat(2, 1fr);
     }
