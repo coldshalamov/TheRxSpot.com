@@ -113,7 +113,8 @@ class FAQAccordion {
 class StickyNav {
     constructor() {
         this.nav = document.getElementById('main-nav');
-        this.scrollThreshold = 100;
+        this.scrollThreshold = 20;
+        // Reduced from 100 to 20 so navbar snaps into scrolled state sooner
         this.init();
     }
 

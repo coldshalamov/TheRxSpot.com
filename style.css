@@ -399,9 +399,9 @@ p {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 168px;
-    /* 20% bigger than 140px */
-    width: 168px;
+    height: 173px;
+    /* 5% smaller than 182px (182px * 0.95) */
+    width: 173px;
     background: transparent;
     transition: all var(--transition-base);
 }
@@ -421,9 +421,9 @@ p {
 }
 
 .nav-sticky.scrolled .logo {
-    height: 108px;
-    /* 20% bigger than 90px */
-    width: 108px;
+    height: 111px;
+    /* 5% smaller than 117px (117px * 0.95) */
+    width: 111px;
 }
 
 /* Links */
@@ -639,7 +639,8 @@ p {
     max-width: 95vw;
     margin: 0 auto;
     /* Reduced padding for Splash Page fit (Desktop) */
-    padding: 110px var(--space-4) var(--space-4);
+    padding: 120px var(--space-4) var(--space-4);
+    /* Increased from 110px to push content down 10px */
     display: flex;
     flex-direction: column;
     justify-content: center;
