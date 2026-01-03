@@ -153,6 +153,24 @@
             transform: translateY(-2px);
             box-shadow: 0 8px 20px rgba(1, 181, 198, 0.3);
         }
+
+        /* Fix Navbar Alignment for true centering */
+        .nav-wrapper {
+            grid-template-columns: 1fr auto 1fr !important;
+            gap: 0 !important;
+        }
+
+        .nav-brand-group {
+            justify-self: start;
+        }
+
+        .nav-links {
+            justify-self: center;
+        }
+
+        .nav-actions-stack {
+            justify-self: end;
+        }
     </style>
 </head>
 
