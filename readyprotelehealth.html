@@ -20,9 +20,8 @@
     <style>
         /* Ready Pro Brand Overrides */
         :root {
-            --color-accent-cyan: #01b5c6;
-            --color-accent-cyan-light: #4defff;
             --color-ready-teal: #01b5c6;
+            --color-accent-cyan: var(--color-ready-teal);
         }
 
         body {
@@ -32,30 +31,8 @@
             flex-direction: column;
         }
 
-        /* Nav Group Styling */
-        .nav-brand-group {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-        }
-
-        .partner-logo-img {
-            height: 75px;
-            /* Increased by ~20% from 60px */
-            width: auto;
-            border-radius: 4px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-        }
-
-        .brand-divider {
-            height: 40px;
-            width: 1px;
-            background-color: rgba(255, 255, 255, 0.4);
-        }
-
-        /* Onboarding Section styling */
         .onboarding-section {
-            padding: 60px 0;
+            padding: 40px 0 60px;
             flex-grow: 1;
             display: flex;
             align-items: center;
@@ -66,9 +43,9 @@
             background: white;
             padding: 40px;
             border-radius: var(--radius-xl);
-            box-shadow: 0 20px 40px rgba(1, 181, 198, 0.15);
+            box-shadow: var(--shadow-xl);
             width: 100%;
-            max-width: 650px;
+            max-width: 600px;
             border: 1px solid var(--color-gray-200);
             border-top: 6px solid var(--color-ready-teal);
             margin: 0 auto;
@@ -83,7 +60,18 @@
             font-family: var(--font-heading);
             color: var(--color-brand-navy);
             font-size: 2rem;
-            margin-bottom: 15px;
+            margin-bottom: 5px;
+        }
+
+        .form-header .tagline {
+            color: var(--color-ready-teal);
+            font-style: italic;
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+
+        .form-header p {
+            color: var(--color-gray-600);
         }
 
         .form-group {
@@ -128,6 +116,26 @@
             background-color: rgba(1, 181, 198, 0.05);
         }
 
+        /* Nav Group Styling */
+        .nav-brand-group {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .partner-logo-img {
+            height: 60px;
+            width: auto;
+            border-radius: 4px;
+        }
+
+        .brand-divider {
+            height: 30px;
+            width: 1px;
+            background-color: rgba(255, 255, 255, 0.3);
+            margin-top: 0 !important;
+        }
+
         .btn-submit-partner {
             background: linear-gradient(135deg, var(--color-ready-teal) 0%, var(--color-brand-navy) 100%);
             color: white;
@@ -138,202 +146,39 @@
             width: 100%;
             font-size: 1.1rem;
             cursor: pointer;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            transition: all 0.3s ease;
         }
 
         .btn-submit-partner:hover {
             transform: translateY(-2px);
             box-shadow: 0 8px 20px rgba(1, 181, 198, 0.3);
         }
-
-        /* SLEEK REDESIGN STYLES */
-        .hero-short {
-            height: 280px !important;
-            min-height: 280px !important;
-            align-items: flex-start;
-            padding-top: 100px;
-        }
-
-        .onboarding-section {
-            padding-top: 0;
-            margin-top: -100px;
-            /* Overlap effect */
-            position: relative;
-            z-index: 10;
-        }
-
-        .partner-header {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            margin-bottom: 30px;
-            padding-bottom: 20px;
-            border-bottom: 1px solid var(--color-gray-200);
-        }
-
-        .partner-title {
-            font-family: 'Outfit', sans-serif;
-            font-weight: 700;
-            font-size: 2.5rem;
-            color: var(--color-brand-navy);
-            margin-bottom: 5px;
-            line-height: 1.2;
-            text-align: center !important;
-            display: block;
-            width: 100%;
-        }
-
-        .partner-tagline {
-            font-family: 'Inter', sans-serif;
-            font-weight: 400;
-            font-size: 1.1rem;
-            color: var(--color-ready-teal);
-            font-style: italic;
-            letter-spacing: 0.02em;
-            text-align: center !important;
-            display: block;
-            width: 100%;
-        }
-
-        .nav-actions-stack {
-            display: flex;
-        }
-
-        /* NEW SIDEBAR LAYOUT STYLES */
-        /* TRIPTYCH LAYOUT STYLES - Single Cohesive Card */
-        .ready-pro-container {
-            display: flex;
-            flex-direction: column;
-            background: white;
-            border-radius: 20px;
-            box-shadow: 0 20px 60px rgba(1, 181, 198, 0.15);
-            overflow: hidden;
-            width: 100%;
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        .side-panel {
-            background-color: #effbfe;
-            /* Ready Pro Light Blue */
-            padding: 40px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            gap: 40px;
-        }
-
-        .form-panel {
-            background-color: white;
-            padding: 40px;
-            flex: 1;
-            /* Takes remaining space on mobile, specific width on desktop */
-            border-top: 6px solid var(--color-ready-teal);
-            /* Accent on top */
-        }
-
-        .info-item {
-            /* No card look, just text blocks */
-        }
-
-        .info-title {
-            font-family: 'Outfit', sans-serif;
-            font-weight: 700;
-            font-size: 1.5rem;
-            color: #00b5c8;
-            /* Ready Pro Teal */
-            margin-bottom: 12px;
-            line-height: 1.2;
-        }
-
-        .info-text {
-            font-family: 'Inter', sans-serif;
-            font-size: 1rem;
-            color: #374151;
-            line-height: 1.6;
-        }
-
-        /* Hiding original Info Card styles since we are using panels now */
-        .info-card,
-        .sidebar,
-        .split-layout-wrapper {
-            display: none;
-        }
-
-        @media (min-width: 768px) {
-            .ready-pro-container {
-                flex-direction: row;
-                align-items: stretch;
-                /* Equal height */
-            }
-
-            .side-panel {
-                flex: 1;
-                /* Wings take 1 part each */
-                max-width: 350px;
-                /* Limit width of sidebars */
-            }
-
-            .form-panel {
-                flex: 2;
-                /* Form takes 2 parts (wider) */
-                border-left: 1px solid #edf2f7;
-                border-right: 1px solid #edf2f7;
-                border-top: none;
-                /* Remove top border in flex mode if desired, or keep */
-                border-top: 6px solid var(--color-ready-teal);
-                /* Keep accent */
-                z-index: 10;
-            }
-
-            .side-panel.left {
-                text-align: right;
-                /* Align text towards the form? User ref showed left align. Let's stick to left align for readability. */
-                text-align: left;
-            }
-        }
-
-        /* Override previous form-card margins/shadows since it's now inside the container */
-        .form-card {
-            box-shadow: none;
-            border: none;
-            border-radius: 0;
-            border-top: none;
-            margin: 0;
-            max-width: none;
-            padding: 0;
-            /* Padding handled by form-panel */
-        }
     </style>
 </head>
 
 <body>
 
-    <!-- Navigation (Standard Structure) -->
+    <!-- Navigation (Standardized with Dual Logo) -->
     <nav id="main-nav" class="nav-sticky">
         <div class="nav-main-content">
-            <div class="container-wide">
+            <div class="container text-center">
                 <div class="nav-wrapper">
-
-                    <!-- Brand Group: Partner + Standard Rx Logo -->
                     <div class="nav-brand-group">
-                        <!-- Ready Pro Logo (New) -->
+                        <!-- Ready Pro Logo -->
                         <a href="https://readypronutrition.com" target="_blank" rel="noopener noreferrer">
                             <img src="images/Readypro-cropped.jpg" alt="Ready Pro" class="partner-logo-img">
                         </a>
 
-                        <div class="brand-divider" style="margin-top: 10px;"></div>
+                        <div class="brand-divider"></div>
 
-                        <!-- The Rx Spot Standard Logo Container -->
-                        <a href="index.html" class="logo">
+                        <!-- The Rx Spot Logo -->
+                        <a href="index.html" class="logo" style="box-shadow: none;">
                             <img src="images/logo.png" alt="The Rx Spot" class="logo-image">
                         </a>
                     </div>
 
                     <div class="nav-links">
-                        <a href="index.html" style="color: white !important;">Back to Home</a>
+                        <a href="index.html">Back to Home</a>
                     </div>
 
                     <div class="nav-actions-stack">
@@ -352,201 +197,122 @@
         </div>
     </nav>
 
-    <!-- Hero Section (Standard) -->
-    <!-- Hero Section (Background Only) -->
+    <!-- Hero Section (Standardized Match) -->
     <section class="hero hero-short">
         <div class="hero-background">
             <img src="images/processed/modern_hero.png" alt="" class="hero-bg-image">
             <div class="hero-overlay"></div>
         </div>
         <div class="container">
-            <!-- Content moved to form card for sleek look -->
+            <div class="hero-content">
+                <h1 class="hero-sub reveal delay-1" style="font-size: var(--text-4xl); margin-bottom: 0; opacity: 1;">
+                    Ready Pro Partnership
+                </h1>
+            </div>
         </div>
     </section>
 
     <!-- Content Section -->
     <section class="onboarding-section">
-        <div class="container-wide"> <!-- Changed to container-wide for 3-col layout -->
-
-            <div class="split-layout-wrapper" style="display: flex; flex-direction: column;">
-
-                <!-- LEFT SIDEBAR -->
-                <aside class="sidebar sidebar-left">
-                    <div class="info-card">
-                        <div class="info-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path
-                                    d="M6 13.87A4 4 0 0 1 7.41 6a5.11 5.11 0 0 1 1.05-1.54 5 5 0 0 1 7.08 0A5.11 5.11 0 0 1 16.59 6 4 4 0 0 1 18 13.87V21H6Z" />
-                            </svg>
-                        </div>
-                        <h3 class="info-title">Protein First</h3>
-                        <p class="info-text">
-                            Protein is the star of every ReadyPro product — because when you eat less, every gram counts
-                            more. We build our snacks, shakes, and meals around high-quality protein to help you stay
-                            strong, satisfied, and steady all day long.
-                        </p>
-                    </div>
-
-                    <div class="info-card">
-                        <div class="info-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z" />
-                            </svg>
-                        </div>
-                        <h3 class="info-title">Hydration & Fiber</h3>
-                        <p class="info-text">
-                            Our drinks and supplements keep you hydrated, regular, and comfortable, without the bloat or
-                            sugar overload. Gentle on your gut, easy on your routine, and built for everyday wellness.
-                        </p>
-                    </div>
-                </aside>
-
-                <!-- RIGHT SIDEBAR -->
-                <aside class="sidebar sidebar-right">
-                    <div class="info-card">
-                        <div class="info-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <circle cx="12" cy="12" r="10" />
-                                <line x1="12" y1="16" x2="12" y2="12" />
-                                <line x1="12" y1="8" x2="12.01" y2="8" />
-                            </svg>
-                        </div>
-                        <h3 class="info-title">Portion Smart</h3>
-                        <p class="info-text">
-                            We believe smart nutrition should fit into your day — not the other way around. That's why
-                            we craft portion-right snacks, drinks, and supplements that help you meet your goals without
-                            stress or waste. No overstuffed shakes. No half-eaten bars. Just balance that fits.
-                        </p>
-                    </div>
-
-                    <div class="info-card">
-                        <div class="info-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-                            </svg>
-                        </div>
-                        <h3 class="info-title">Backed by 45 Years</h3>
-                        <p class="info-text">
-                            We've helped thousands of people fuel their health journeys, and we've taken everything
-                            we've learned from the medical and wellness world to create ReadyPro. Every product combines
-                            real-world dietitian insight, scientific precision, and decades of experience.
-                        </p>
-                    </div>
-                </aside>
-
-                <!-- CENTER FORM -->
-                <div class="form-card centered-form">
-
-                    <div class="partner-header" style="text-align: center;">
-                        <h2 class="partner-title" style="text-align: center !important; width: 100%;">Ready Pro</h2>
-                        <p class="partner-tagline"
-                            style="text-align: center !important; width: 100%; margin-bottom: 15px;">
-                            When You Eat Less, Every Bite Matters More</p>
-
-                    </div>
-
-
-
-                    <!-- FormSubmit Action: Separate Email (Placeholder: readypro@therxspot.com) -->
-                    <form action="https://formsubmit.co/readypro@therxspot.com" method="POST"
-                        enctype="multipart/form-data">
-                        <input type="hidden" name="_subject" value="New Ready Pro Partnership Submission">
-                        <input type="hidden" name="_template" value="box">
-                        <input type="hidden" name="_captcha" value="false">
-                        <!-- CC Specific stakeholders -->
-                        <input type="hidden" name="_cc" value="PlatformOB@therxspot.com">
-                        <input type="hidden" name="_next"
-                            value="https://therxspot.com/readyprotelehealth.html?success=true">
-
-                        <div class="form-group">
-                            <label for="businessName">Business Name *</label>
-                            <input type="text" id="businessName" name="businessName" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="ownerName">Owner's Name *</label>
-                            <input type="text" id="ownerName" name="ownerName" required>
-                        </div>
-
-                        <div class="form-row" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
-                            <div class="form-group">
-                                <label for="businessPhone">Business Phone *</label>
-                                <input type="tel" id="businessPhone" name="businessPhone" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="ownerPhone">Owner's Phone *</label>
-                                <input type="tel" id="ownerPhone" name="ownerPhone" required>
-                            </div>
-                        </div>
-
-                        <div class="form-row" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
-                            <div class="form-group">
-                                <label for="state">State *</label>
-                                <input type="text" id="state" name="state" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="zipCode">Zip Code *</label>
-                                <input type="text" id="zipCode" name="zipCode" required>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="email">Email Address *</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-
-                        <div class="form-row" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
-                            <div class="form-group">
-                                <label for="dob">Date of Birth *</label>
-                                <input type="date" id="dob" name="dob" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="gender">Gender *</label>
-                                <select id="gender" name="gender" required>
-                                    <option value="">Select...</option>
-                                    <option value="Male">Male</option>
-                                    <option value="Female">Female</option>
-                                    <option value="Other">Other</option>
-                                    <option value="Prefer not to say">Prefer not to say</option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="referral">Who referred you? *</label>
-                            <input type="text" id="referral" name="referral" required value="Ready Pro Partnership"
-                                readonly style="background-color: var(--color-gray-100); color: var(--color-gray-500);">
-                            <small style="color: var(--color-gray-500);">Pre-filled</small>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="logo">Upload Your Business Logo *</label>
-                            <input type="file" id="logo" name="logo" accept="image/*" required class="form-file-input">
-                            <small style="display:block; margin-top:5px; color:var(--color-gray-500);">Accepted formats:
-                                PNG, JPG, SVG</small>
-                        </div>
-
-                        <button type="submit" class="btn-submit-partner">Submit Information</button>
-
-                        <div
-                            style="text-align: center; margin-top: 15px; font-size: 0.9em; color: var(--color-gray-500);">
-                            Powered by The Rx Spot & Ready Pro Nutrition
-                        </div>
-                    </form>
+        <div class="container">
+            <div class="form-card">
+                <div class="form-header">
+                    <h1>Ready Pro</h1>
+                    <p class="tagline">When You Eat Less, Every Bite Matters More</p>
+                    <p>Please finish providing your information below to complete our partnership onboarding.</p>
                 </div>
 
-            </div> <!-- End split-layout-wrapper -->
+                <form action="https://formsubmit.co/readypro@therxspot.com" method="POST" enctype="multipart/form-data">
+                    <input type="hidden" name="_subject" value="New Ready Pro Partnership Submission">
+                    <input type="hidden" name="_template" value="box">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_cc" value="PlatformOB@therxspot.com">
+                    <input type="hidden" name="_next"
+                        value="https://therxspot.com/readyprotelehealth.html?success=true">
+
+                    <div class="form-group">
+                        <label for="businessName">Business Name *</label>
+                        <input type="text" id="businessName" name="businessName" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="ownerName">Owner's Name *</label>
+                        <input type="text" id="ownerName" name="ownerName" required>
+                    </div>
+
+                    <div class="form-row" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                        <div class="form-group">
+                            <label for="businessPhone">Business Phone *</label>
+                            <input type="tel" id="businessPhone" name="businessPhone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="ownerPhone">Owner's Phone *</label>
+                            <input type="tel" id="ownerPhone" name="ownerPhone" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                        <div class="form-group">
+                            <label for="state">State *</label>
+                            <input type="text" id="state" name="state" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="zipCode">Zip Code *</label>
+                            <input type="text" id="zipCode" name="zipCode" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-row" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                        <div class="form-group">
+                            <label for="dob">Date of Birth *</label>
+                            <input type="date" id="dob" name="dob" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="gender">Gender *</label>
+                            <select id="gender" name="gender" required>
+                                <option value="">Select...</option>
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                                <option value="Other">Other</option>
+                                <option value="Prefer not to say">Prefer not to say</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="referral">Who referred you? *</label>
+                        <input type="text" id="referral" name="referral" required value="Ready Pro Partnership" readonly
+                            style="background-color: var(--color-gray-100); color: var(--color-gray-500);">
+                        <small style="color: var(--color-gray-500);">Pre-filled for partnership tracking</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="logo">Upload Your Business Logo *</label>
+                        <input type="file" id="logo" name="logo" accept="image/*" required class="form-file-input">
+                        <small style="display:block; margin-top:5px; color:var(--color-gray-500);">Accepted formats:
+                            PNG, JPG, SVG</small>
+                    </div>
+
+                    <button type="submit" class="btn-submit-partner" style="margin-top: 30px;">Submit
+                        Information</button>
+
+                    <div style="text-align: center; margin-top: 15px; font-size: 0.9em; color: var(--color-gray-500);">
+                        Powered by The Rx Spot & Ready Pro Nutrition
+                    </div>
+                </form>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer" style="padding: 20px 0; background: var(--color-brand-navy); color: white;">
+    <footer class="footer">
         <div class="container">
-            <div class="footer-bottom" style="text-align: center;">
+            <div class="footer-bottom">
                 <p>&copy; 2025 The Rx Spot. All rights reserved.</p>
             </div>
         </div>
@@ -560,9 +326,10 @@
         if (window.location.search.includes('success=true')) {
             const header = document.querySelector('.form-header');
             header.innerHTML = `
-                <div style="color: var(--color-success); font-size: 1.2rem; background: #e6fffa; padding: 20px; border-radius: 8px; border: 1px solid var(--color-success);">
-                    <h2 style="color: var(--color-success); margin-bottom: 10px;">Submission Received!</h2>
-                    <p style="color: var(--color-gray-700);">Thank you for submitting your information. Our team will review your details and contact you shortly.</p>
+                <div style="color: var(--color-success); font-size: 1.1rem; background: #f0fff4; padding: 25px; border-radius: 12px; border: 1px solid #c6f6d5; text-align: center;">
+                    <div style="font-size: 3rem; margin-bottom: 15px;">✓</div>
+                    <h2 style="color: #22543d; margin-bottom: 10px; font-family: var(--font-heading);">Submission Received!</h2>
+                    <p style="color: #276749;">Thank you for submitting your information. Our team will review your details and contact you shortly.</p>
                 </div>
             `;
             document.querySelector('form').style.display = 'none';
