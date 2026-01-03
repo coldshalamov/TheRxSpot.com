@@ -399,23 +399,18 @@ p {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 140px;
-    /* Slightly smaller initial for better fit */
-    width: 140px;
-    border-radius: 50%;
+    height: 168px;
+    /* 20% bigger than 140px */
+    width: 168px;
     background: transparent;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-    overflow: hidden;
     transition: all var(--transition-base);
 }
 
 .logo-image {
     height: 100%;
     width: 100%;
-    object-fit: cover;
-    transform: scale(1.45) translateZ(0);
-    /* translateZ forces GPU rendering */
-    transform-origin: center;
+    object-fit: contain;
+    /* Changed from cover to contain to show full circular logo */
 
     /* Force browser to use highest quality interpolation */
     image-rendering: -webkit-optimize-contrast;
@@ -423,13 +418,12 @@ p {
 
     /* Prevent micro-stutter or blurring during composition */
     backface-visibility: hidden;
-    will-change: transform;
 }
 
 .nav-sticky.scrolled .logo {
-    height: 90px;
-    width: 90px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    height: 108px;
+    /* 20% bigger than 90px */
+    width: 108px;
 }
 
 /* Links */
